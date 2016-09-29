@@ -28,7 +28,7 @@ public class PowerUpBlock : MonoBehaviour
             {
                 Instantiate(spawnedPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
             }
-            Debug.Log("memed");
+            //Debug.Log("memed");
             spawned = true;
         }
     }

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MovementBase {
+public class Mushroom : MovementBase {
 
-    //destroy player/enemy if they're over eachother
     public override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
@@ -14,15 +13,11 @@ public class Enemy : MovementBase {
 
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.transform.position.y >= transform.position.y)
-            {
-                Destroy(this.gameObject);
-            }
-            else {
-                collision.gameObject.GetComponent<CharacterController2D>().health--;
-            }
+
+            Destroy(this.gameObject);
+
+            collision.gameObject.GetComponent<CharacterController2D>().health = 2;
         }
     }
+
 }
-
-

@@ -26,8 +26,8 @@ GameObject:
   - 33: {fileID: 3314556}
   - 23: {fileID: 2314446}
   - 50: {fileID: 5007052}
-  - 61: {fileID: 6185180}
   - 114: {fileID: 11446396}
+  - 61: {fileID: 6185180}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -232,7 +232,10 @@ MonoBehaviour:
   health: 1
   firingTime: 0
   firingRate: 1.5
-  poweredUp: 0
+  health1: {fileID: 2100000, guid: 17ee0aea4897b124fa7829a215da5a11, type: 2}
+  health2: {fileID: 2100000, guid: bab31745caee805409fd51a98ce870b6, type: 2}
+  health3: {fileID: 2100000, guid: f1011ab9d7781314da99b0067653a3ed, type: 2}
+  meshRenderer: {fileID: 0}
 --- !u!124 &12400568
 Behaviour:
   m_ObjectHideFlags: 1

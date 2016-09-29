@@ -20,13 +20,17 @@ public class CharacterController2D : MonoBehaviour {
     public int health = 1;
     public float firingTime;
     public float firingRate = 1.5f;
-    public bool poweredUp = false;
+
+    public Material health1;
+    public Material health2;
+    public Material health3;
+    public MeshRenderer meshRenderer;
 
 	Vector2 start;
 	RaycastHit2D hit;
 
 	void Start() {
-        
+        this.GetComponent<Material>();
     }
 
 	void Update () {
@@ -88,8 +92,18 @@ public class CharacterController2D : MonoBehaviour {
             Destroy(this.gameObject);
         }
 
-        if (poweredUp == true) {
+        if (health == 3) {
+            meshRenderer.material = health3;
             fire();
+            //transform.localScale = new Vector3(0, 0.5f, 0);
+        }
+        if (health == 2) {
+            meshRenderer.material = health2;
+            //transform.localScale = new Vector3(0, 0.5f, 0);
+        }
+        if (health == 1) {
+            meshRenderer.material = health1;
+            //transform.localScale = new Vector3(0, -0.5f, 0);
         }
 
 

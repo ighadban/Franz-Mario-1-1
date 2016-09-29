@@ -9,12 +9,12 @@ public class MovementBase : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(direction * Time.deltaTime);
+        GetComponent<Rigidbody2D>().AddForce(direction * moveSpeed);
 	}
 
     public virtual void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Wall") {
-            //Debug.Log("hit");
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy") {
+            Debug.Log("hit");
             direction.x *= -1;
         }
     }
