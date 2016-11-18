@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+    //Variables
+
     public float coins = 0.0f;
     public float timeLimit = 500.0f;
 

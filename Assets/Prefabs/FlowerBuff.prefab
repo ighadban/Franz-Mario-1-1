@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3081dab61d9a5da45a2e5be9b6139c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerup: {fileID: 8300000, guid: 6083b8dab2318874188c3c900f7316ef, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Enemy : MovementBase {
 
+    //Variables
+
+    public AudioClip deathSound;
+
     //destroy player/enemy if they're over eachother
     public override void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,10 +16,12 @@ public class Enemy : MovementBase {
             direction.x *= -1;
         }
 
+        //if player jumps on enemy from above, destroy, else remove 1 health
         if (collision.gameObject.tag == "Player")
         {
             if (collision.gameObject.transform.position.y >= transform.position.y)
             {
+                audioManager.PlayAudio(deathSound);
                 Destroy(this.gameObject);
             }
             else {

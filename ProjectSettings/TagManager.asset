@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - GameManager
   - Wall
+  - AudioManager
   layers:
   - Default
   - TransparentFX

@@ -54,6 +54,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &196634
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 476648}
+  - 33: {fileID: 3303824}
+  - 64: {fileID: 6466170}
+  - 23: {fileID: 2389966}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &433798
 Transform:
   m_ObjectHideFlags: 1
@@ -61,9 +79,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -35}
+  m_LocalPosition: {x: 0, y: 2, z: -35}
   m_LocalScale: {x: 3.3052177, y: 3.3052177, z: 3.3052177}
-  m_Children: []
+  m_Children:
+  - {fileID: 476648}
   m_Father: {fileID: 469548}
   m_RootOrder: 0
 --- !u!4 &448790
@@ -85,12 +104,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 3, z: 0}
+  m_LocalPosition: {x: -4.6, y: 4, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 433798}
   - {fileID: 448790}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &476648
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 30}
+  m_LocalScale: {x: 10, y: 10, z: 0.3781899}
+  m_Children: []
+  m_Father: {fileID: 433798}
   m_RootOrder: 0
 --- !u!20 &2071090
 Camera:
@@ -152,6 +183,39 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2389966
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196634}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f87dba6ab4b6065449fecff4602daffb, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3303824
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196634}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3314556
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -190,6 +254,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!64 &6466170
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!81 &8172550
 AudioListener:
   m_ObjectHideFlags: 1
@@ -215,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2a2170505fad446a03015f58f31c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firefireFlower: {fileID: 8300000, guid: 5cbc3816614831746adb506a7848c33f, type: 3}
   fireFlower: {fileID: 180370, guid: b0db3d18cc3b0344883783af1f09e538, type: 2}
   muzzle: {fileID: 100380}
   upSpead: 1200
@@ -235,7 +312,7 @@ MonoBehaviour:
   health1: {fileID: 2100000, guid: 17ee0aea4897b124fa7829a215da5a11, type: 2}
   health2: {fileID: 2100000, guid: bab31745caee805409fd51a98ce870b6, type: 2}
   health3: {fileID: 2100000, guid: f1011ab9d7781314da99b0067653a3ed, type: 2}
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 2314446}
 --- !u!124 &12400568
 Behaviour:
   m_ObjectHideFlags: 1

@@ -3,9 +3,17 @@ using System.Collections;
 
 public class MovementBase : MonoBehaviour {
 
+    //Variables
+
+    public AudioManager audioManager;
+
     public Vector3 direction = new Vector3(-1, 0, 0);
 
     public float moveSpeed;
+
+    public virtual void Start() {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

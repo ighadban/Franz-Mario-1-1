@@ -75,6 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ff617a333f38743935154c75bb1b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldGift: 10
+  lifeTime: 0.5
+  coinPickup: {fileID: 8300000, guid: 5f501d42da8e16e42b5c6cdbf49af6ea, type: 3}
 --- !u!135 &13550128
 SphereCollider:
   m_ObjectHideFlags: 1

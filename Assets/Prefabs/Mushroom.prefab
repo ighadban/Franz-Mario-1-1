@@ -107,8 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae8b120b64db964cb6243a093ba0a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   direction: {x: 1, y: 0, z: 0}
   moveSpeed: 10.6
+  mushroom: {fileID: 8300000, guid: 6083b8dab2318874188c3c900f7316ef, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

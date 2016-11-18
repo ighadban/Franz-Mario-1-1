@@ -3,6 +3,12 @@ using System.Collections;
 
 public class CharacterController2D : MonoBehaviour {
 
+    //Variables
+
+    AudioManager audioManager;
+
+    public AudioClip firefireFlower;
+
     public GameObject fireFlower;
     public GameObject muzzle;
 	public float upSpead;
@@ -31,6 +37,7 @@ public class CharacterController2D : MonoBehaviour {
 
 	void Start() {
         this.GetComponent<Material>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
 	void Update () {
@@ -89,7 +96,7 @@ public class CharacterController2D : MonoBehaviour {
 		Move ();
 
         if (health <= 0) {
-            Destroy(this.gameObject);
+            Application.LoadLevel("TestBed");
         }
 
         if (health == 3) {
@@ -156,6 +163,7 @@ public class CharacterController2D : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && Time.time> firingTime) {
             Instantiate(fireFlower, muzzle.transform.position, muzzle.transform.rotation);
             firingTime = Time.time + firingRate;
+            audioManager.PlayAudio(firefireFlower);
         }
     }
 }

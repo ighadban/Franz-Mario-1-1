@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+    //Variables
+
     public Text coins;
     public Text timeLimit;
 

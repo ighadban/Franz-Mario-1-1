@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class WinLose : MonoBehaviour {
 
+    //Variables
+
     public Text winLose;
 
 	// Use this for initialization
@@ -15,4 +17,8 @@ public class WinLose : MonoBehaviour {
 	void Update () {
         winLose.text = "You " + PlayerPrefs.GetString("WIN");
 	}
+
+    public void restartGame() {
+        Application.LoadLevel("TestBed");
+    }
 }
